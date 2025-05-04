@@ -629,9 +629,18 @@ local AutoUpgradeSlot6_Toggle = Main_RightGroupbox:AddToggle("UpgSlot6",{
 })
 
 -- Addons
+ThemeManager:SetLibrary(Library)
 SaveManager:SetLibrary(Library)
+
 SaveManager:IgnoreThemeSettings()
+
 SaveManager:SetIgnoreIndexes({ "MenuKeybind" })
-SaveManager:SetFolder("S001-O/AnimeRangersX")
+
+ThemeManager:SetFolder("S001-O")
+SaveManager:SetFolder("S001-O/configs")
+
 SaveManager:BuildConfigSection(Tabs["MainTab"])
+
+ThemeManager:ApplyToTab(Tabs["MainTab"])
+
 SaveManager:LoadAutoloadConfig()
