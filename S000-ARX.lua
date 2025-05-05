@@ -330,13 +330,9 @@ local AutoJoinFriends_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinFriends",{
 local RejoinButton = Main_LeftGroupbox:AddButton({
  	Text = "Rejoin Server",
  	Func = function()
-         if #Players:GetPlayers() <= 1 then
-             player:Kick("\nRejoining...")
-             wait(1)
-             TeleportService:Teleport(PlaceId, player)
-         else
-             TeleportService:TeleportToPlaceInstance(PlaceId, JobId, player)
-         end
+        player:Kick("\nRejoining...")
+        wait(1)
+        TeleportService:Teleport(PlaceId, player)
      end
  })
 
