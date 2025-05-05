@@ -344,6 +344,13 @@ local RejoinButton = Main_LeftGroupbox:AddButton({
      end
  })
 
+ local InfiniteYieldButton = Main_LeftGroupbox:AddButton({
+	Text = "InfiniteYield Script",
+	Func = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source'))()
+    end
+})
+
 -- Divider
 Main_LeftGroupbox:AddDivider()
 
@@ -383,7 +390,6 @@ local AutoNext_Toggle = Main_LeftGroupbox:AddToggle("AutoNext",{
 			if Values_VoteNext.VoteEnabled.Value then
 				wait(1)
 				fireAutoNext()
-                toggleRewardsUI()
 			end
             wait(1)
 		end
@@ -449,6 +455,7 @@ local AutoRetry_Toggle = Main_LeftGroupbox:AddToggle("AutoRetry",{
 					voteRetry()
 				end
 			end
+            last_retry_time = 0
 			toggleRewardsUI()
             removeSaveToTeleport()
 			wait(1)
