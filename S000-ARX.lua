@@ -152,7 +152,7 @@ local AutoJoinEasterEggEvent_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinEaste
                     wait(10)
                     joinEasterEvent()
                 elseif AutoJoinRangerStageOn and not AutoJoinChallengeOn then
-                    wait(15)
+                    wait(10)
                     joinEasterEvent()
                 else
                     wait(1)
@@ -173,10 +173,10 @@ local AutoJoinChallenge_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinChallenge"
         AutoJoinChallengeOn = AutoJoinChallengeEnabled
 		
         while AutoJoinChallengeOn do
-            wait(15)
+            wait(10)
             if Values_Gamemode.Value == "" then
                 if AutoJoinRangerStageOn then
-                    wait(13)
+                    wait(3)
                     joinChallenge()
                 else
                     wait(3)
