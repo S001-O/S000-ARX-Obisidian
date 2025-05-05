@@ -176,7 +176,7 @@ local AutoJoinChallenge_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinChallenge"
             wait(15)
             if Values_Gamemode.Value == "" and not LoadingDataUI.Enabled then
                 if AutoJoinRangerStageOn then
-                    wait(20)
+                    wait(13)
                     joinChallenge()
                 else
                     wait(3)
