@@ -418,6 +418,8 @@ local function removeSaveToTeleport()
     end
 end
 
+local last_retry_time = 0
+
 -- Auto Retry
 local AutoRetry_Toggle = Main_LeftGroupbox:AddToggle("AutoRetry",{
 	Text = "Auto Retry",
@@ -432,11 +434,9 @@ local AutoRetry_Toggle = Main_LeftGroupbox:AddToggle("AutoRetry",{
 			local currentSecond = localTime.Second
 			antiAfk()
 			if Values_VoteRetry.VoteEnabled.Value and not LoadingDataUI.Enabled then
-				if (currentMinute == 59 and currentSecond >= 50) then
-					wait(15)
-					voteRetry()
-				elseif (currentMinute == 00 and currentSecond <= 05) then
-					wait(5)
+				if (currentMinute == 00) then
+                    last_retry_time = currentSecond
+					wait(last_retry_time)
 					voteRetry()
 				else
 					wait(1)
