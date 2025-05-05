@@ -439,7 +439,7 @@ local AutoRetry_Toggle = Main_LeftGroupbox:AddToggle("AutoRetry",{
 			antiAfk()
 			if Values_VoteRetry.VoteEnabled.Value and not LoadingDataUI.Enabled then
 				if (currentMinute == 00) then
-                    last_retry_time = currentSecond
+                    last_retry_time = currentSecond + 10
 					wait(last_retry_time)
 					voteRetry()
 				else
