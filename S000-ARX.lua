@@ -382,6 +382,7 @@ local AutoNext_Toggle = Main_LeftGroupbox:AddToggle("AutoNext",{
         while AutoNextOn do
 			if Values_VoteNext.VoteEnabled.Value then
 				wait(1)
+                toggleRewardsUI()
 				fireAutoNext()
 			end
             wait(1)
