@@ -143,7 +143,6 @@ local AutoJoinEasterEggEvent_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinEaste
 	Callback = function(AutoJoinEasterEggEventEnabled)
 	
 	AutoJoinEasterEggEventOn = AutoJoinEasterEggEventEnabled
-        wait(8)
 		while AutoJoinEasterEggEventOn do
             if Values_Gamemode.Value == "" and not LoadingDataUI.Enabled then
                 if AutoJoinChallengeOn and AutoJoinRangerStageOn then
@@ -172,9 +171,7 @@ local AutoJoinChallenge_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinChallenge"
     Callback = function(AutoJoinChallengeEnabled)
 	
         AutoJoinChallengeOn = AutoJoinChallengeEnabled
-		wait(8)
         while AutoJoinChallengeOn do
-            wait(10)
             if Values_Gamemode.Value == "" then
                 if AutoJoinRangerStageOn then
                     wait(3)
