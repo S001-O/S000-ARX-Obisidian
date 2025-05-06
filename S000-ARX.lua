@@ -288,6 +288,8 @@ local AutoRejoin_Toggle = Main_LeftGroupbox:AddToggle("AutoRejoin",{
 			if currentMinute == 30 or currentMinute == 00 then
 				lastRejoinTime = 60 - currentSecond
                 wait(lastRejoinTime)
+                player:Kick("\nRejoining...")
+                wait(1)
 				TeleportService:Teleport(PlaceId, player)
             end
 			lastRejoinTime = 0
