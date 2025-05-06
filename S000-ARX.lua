@@ -174,7 +174,7 @@ local AutoJoinChallenge_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinChallenge"
         while AutoJoinChallengeOn do
             if Values_Gamemode.Value == "" then
                 if AutoJoinRangerStageOn then
-                    wait(3)
+                    wait(10)
                     joinChallenge()
                 else
                     wait(3)
