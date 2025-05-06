@@ -142,7 +142,7 @@ local AutoJoinEasterEggEvent_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinEaste
 	Callback = function(AutoJoinEasterEggEventEnabled)
 	
 	AutoJoinEasterEggEventOn = AutoJoinEasterEggEventEnabled
-		
+        wait(8)
 		while AutoJoinEasterEggEventOn do
             if Values_Gamemode.Value == "" and not LoadingDataUI.Enabled then
                 if AutoJoinChallengeOn and AutoJoinRangerStageOn then
@@ -171,7 +171,7 @@ local AutoJoinChallenge_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinChallenge"
     Callback = function(AutoJoinChallengeEnabled)
 	
         AutoJoinChallengeOn = AutoJoinChallengeEnabled
-		
+		wait(8)
         while AutoJoinChallengeOn do
             wait(10)
             if Values_Gamemode.Value == "" then
@@ -245,7 +245,7 @@ local AutoJoinRangerStage_Toggle = Main_LeftGroupbox:AddToggle("AutoJoinRangerSt
     Callback = function(AutoJoinRangerStageEnabled)
     
         AutoJoinRangerStageOn = AutoJoinRangerStageEnabled
-        
+        wait(8)
 		while AutoJoinRangerStageOn do
 			if Values_Gamemode.Value == "" then
 				for world, rangerStage in pairs(AllWorlds) do
