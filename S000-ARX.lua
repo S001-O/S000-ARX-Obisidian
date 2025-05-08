@@ -1,4 +1,3 @@
-if not player.Character then player.CharacterAdded:Wait()
 
 local repo = "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/"
 local Library = loadstring(game:HttpGet(repo .. "Library.lua"))()
